@@ -16,7 +16,7 @@
 <a href="https://github.com/ZGC-EmbodyAI/BayesianVLA">
     <img alt="GitHub" src="https://img.shields.io/badge/GitHub-ZGC--EmbodyAI%2FBayesianVLA-blue?logo=github">
 </a>
-<a href="https://arxiv.org/abs/2601.15197">
+<a href="https://www.alphaxiv.org/abs/2601.15197">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2601.15197-b31b1b.svg">
 </a>
 <a href="https://github.com/ZGC-EmbodyAI/TwinBrainVLA/blob/main/LICENSE">
