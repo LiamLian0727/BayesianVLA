@@ -9,12 +9,12 @@
             color: transparent;
             display: inline-block;
         "
-    >BayesianVLA</span>
+    >LangForce</span>
     : Bayesian Decomposition of Vision Language Action Models via Latent Action Queries
 </h1>
 
-<a href="https://github.com/ZGC-EmbodyAI/BayesianVLA">
-    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-ZGC--EmbodyAI%2FBayesianVLA-blue?logo=github">
+<a href="https://github.com/ZGC-EmbodyAI/LangForce">
+    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-ZGC--EmbodyAI%2FLangForce-blue?logo=github">
 </a>
 <a href="https://www.alphaxiv.org/abs/2601.15197">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2601.15197-b31b1b.svg">
@@ -38,19 +38,19 @@
 
 ## 📖 Abstract
 
-Vision-Language-Action (VLA) models have shown promise in robot manipulation but often struggle to generalize to new instructions or complex multi-task scenarios. We identify a critical pathology in current training paradigms where goal-driven data collection creates a dataset bias. In such datasets, language instructions are highly predictable from visual observations alone, causing the conditional mutual information between instructions and actions to vanish, a phenomenon we term `Information Collapse`. Consequently, models degenerate into vision-only policies that ignore language constraints and fail in out-of-distribution (OOD) settings. To address this, we propose **BayesianVLA:**, a novel framework that enforces instruction following via Bayesian decomposition. By introducing learnable **Latent Action Queries**, we construct a dual-branch architecture to estimate both a vision-only prior $p(a \mid v)$ and a language-conditioned posterior $\pi(a \mid v, \ell)$. We then optimize the policy to maximize the conditional Pointwise Mutual Information (PMI) between actions and instructions. This objective effectively penalizes the vision shortcut and rewards actions that explicitly explain the language command. Without requiring new data, BayesianVLA significantly improves generalization. Extensive experiments across on SimplerEnv and RoboCasa demonstrate substantial gains, including an **11.3\%** improvement on the challenging OOD SimplerEnv benchmark, validating the ability of our approach to robustly ground language in action.
+Vision-Language-Action (VLA) models have shown promise in robot manipulation but often struggle to generalize to new instructions or complex multi-task scenarios. We identify a critical pathology in current training paradigms where goal-driven data collection creates a dataset bias. In such datasets, language instructions are highly predictable from visual observations alone, causing the conditional mutual information between instructions and actions to vanish, a phenomenon we term `Information Collapse`. Consequently, models degenerate into vision-only policies that ignore language constraints and fail in out-of-distribution (OOD) settings. To address this, we propose **LangForce:**, a novel framework that enforces instruction following via Bayesian decomposition. By introducing learnable **Latent Action Queries**, we construct a dual-branch architecture to estimate both a vision-only prior $p(a \mid v)$ and a language-conditioned posterior $\pi(a \mid v, \ell)$. We then optimize the policy to maximize the conditional Pointwise Mutual Information (PMI) between actions and instructions. This objective effectively penalizes the vision shortcut and rewards actions that explicitly explain the language command. Without requiring new data, LangForce significantly improves generalization. Extensive experiments across on SimplerEnv and RoboCasa demonstrate substantial gains, including an **11.3\%** improvement on the challenging OOD SimplerEnv benchmark, validating the ability of our approach to robustly ground language in action.
 
 ## 🏗️ Architecture
 
-**BayesianVLA** is a novel framework designed to solve the **Vision Shortcut** problem in Vision-Language-Action (VLA) models. 
+**LangForce** is a novel framework designed to solve the **Vision Shortcut** problem in Vision-Language-Action (VLA) models. 
 
 <div align="center">
-  <img src="./assets/arch.png" alt="BayesianVLA Framework" width="100%">
+  <img src="./assets/arch.png" alt="LangForce Framework" width="100%">
 </div
 
 In current VLA training, goal-driven datasets often make language instructions highly predictable from visual observations alone. This leads to **Information Collapse**, where the model ignores language and degenerates into a vision-only policy, failing miserably in out-of-distribution (OOD) scenarios.
 
-**BayesianVLA** addresses this by:
+**LangForce** addresses this by:
 1. **Bayesian Decomposition**: Explicitly modeling a vision-only prior $p(a|v)$ and a language-conditioned posterior $\pi(a|v, \ell)$.
 2. **LLR Optimization**: Maximizing the Log-Likelihood Ratio (LLR) to penalize actions that rely solely on visual cues and reward actions that are truly grounded in language instructions.
 
@@ -65,7 +65,7 @@ In current VLA training, goal-driven datasets often make language instructions h
 | Method | SimplerEnv (Avg) | RoboCasa (Avg) |
 | :--- | :---: | :---: |
 | QwenGR00T (Baseline) | 55.2% | 47.8% |
-| **BayesianVLA (Ours)** | **66.5% (+11.3%)** | **50.4% (+2.6%)** |
+| **LangForce (Ours)** | **66.5% (+11.3%)** | **50.4% (+2.6%)** |
 
 ## 🙏 Acknowledgements
 
@@ -79,7 +79,7 @@ We would like to thank the [starVLA](https://github.com/starVLA/starVLA) project
 ## Citation
 If you find this project or the dataset helpful, please cite:
 ```bibtex
-@misc{BayesianVLA_2026_arXiv,
+@misc{LangForce_2026_arXiv,
       title={LangForce: Bayesian Decomposition of Vision Language Action Models via Latent Action Queries}, 
       author={Shijie Lian and Bin Yu and Xiaopeng Lin and Laurence T. Yang and Zhaolong Shen and Changti Wu and Yuzhuo Miao and Cong Huang and Kai Chen},
       year={2026},
