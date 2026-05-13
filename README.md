@@ -38,7 +38,8 @@
 
 ## 📢 News
 
-- [May 1, 2026] :zap:  `LangForce` has been accepted to ICML 2026.
+- [May 13, 2026] :zap:  Thanks to Xinzhiyuan(新智元) for covering our work: [Wechat Article](https://mp.weixin.qq.com/s/czW-odrhMaCkBiQz841cTQ) / [Tencent News](https://news.qq.com/rain/a/20260513A04VKS00)
+- [May 1, 2026]  :  `LangForce` has been accepted to ICML 2026.
 - [Feb 10, 2026] : `LangForce` has been integrated into [starVLA](https://github.com/starVLA/starVLA). You can now **directly train LangForce through starVLA** and perform end-to-end training and evaluation on benchmarks such as LIBERO, SimplerEnv, and RoboCasa.
 
 
